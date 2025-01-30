@@ -1,4 +1,4 @@
-package com.walking.lesson7_MethodsVarArgsOverloading;
+package com.walking.lesson7_1_MethodsVarArgs;
 
 public class Main {
     public static void main(String[] args) {
