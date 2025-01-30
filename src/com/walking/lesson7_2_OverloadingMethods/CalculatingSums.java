@@ -28,4 +28,43 @@ public class CalculatingSums {
         }
         return (a + b);
     }
+
+    public static Long sum(Long a, Long b) {
+        long sum = a + b;
+        if (a > Long.MAX_VALUE - b) {
+            System.out.println("Угроза потери данных: значение переполнено");
+            return sum;
+        }
+        return sum;
+    }
+
+    public static Float sum(Float a, Float b) {
+        double sum = a + b;
+        if (sum > Float.MAX_VALUE) {
+            System.out.println("Угроза потери данных: значение переполнено");
+            return (float)sum;
+        }
+        return (float)sum;
+    }
+
+    public static Double sum(Double a, Double b) {
+        double sum = a + b;
+        if (a > Double.MAX_VALUE - b) {
+            System.out.println("Угроза потери данных: значение переполнено");
+            return sum;
+        }
+        return sum;
+    }
+
+    public static Boolean sum(Boolean a, Boolean b) {
+        return a && b;
+    }
+
+    public static String sum(Character... a) {
+        StringBuilder builder = new StringBuilder();
+        for (Character c : a) {
+            builder.append(c);
+        }
+        return builder.toString();
+    }
 }
