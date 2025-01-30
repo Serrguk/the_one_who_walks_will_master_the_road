@@ -5,7 +5,7 @@ public class StringConcatenation {
     public String toMerge(String... s) {
         StringBuilder result = new StringBuilder();
         for (String str : s) {
-            result.append(str);
+            result.append("\n").append(str);
         }
         return result.toString();
     }
