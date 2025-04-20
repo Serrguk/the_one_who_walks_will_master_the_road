@@ -1,4 +1,4 @@
-package com.walking.lesson7_4_RecursiveSqrt;
+package com.walking.lesson7_MethodsOverloadingAndRecursion.task_7_4_RecursiveSqrt;
 
 import java.util.Scanner;
 

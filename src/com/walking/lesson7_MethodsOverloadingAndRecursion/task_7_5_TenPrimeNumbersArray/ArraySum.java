@@ -1,4 +1,4 @@
-package com.walking.lesson7_5_TenPrimeNumbersInArray;
+package com.walking.lesson7_MethodsOverloadingAndRecursion.task_7_5_TenPrimeNumbersArray;
 
 public class ArraySum {
 

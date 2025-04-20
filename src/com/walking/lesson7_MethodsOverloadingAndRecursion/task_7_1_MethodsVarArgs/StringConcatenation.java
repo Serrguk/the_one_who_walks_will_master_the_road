@@ -1,4 +1,4 @@
-package com.walking.lesson7_1_MethodsVarArgs;
+package com.walking.lesson7_MethodsOverloadingAndRecursion.task_7_1_MethodsVarArgs;
 
 public class StringConcatenation {
 

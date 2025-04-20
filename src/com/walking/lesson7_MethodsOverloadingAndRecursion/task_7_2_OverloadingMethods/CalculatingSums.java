@@ -1,4 +1,4 @@
-package com.walking.lesson7_2_OverloadingMethods;
+package com.walking.lesson7_MethodsOverloadingAndRecursion.task_7_2_OverloadingMethods;
 
 public class CalculatingSums {
 

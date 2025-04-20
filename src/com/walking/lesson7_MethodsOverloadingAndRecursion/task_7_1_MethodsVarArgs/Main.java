@@ -1,8 +1,7 @@
-package com.walking.lesson7_1_MethodsVarArgs;
+package com.walking.lesson7_MethodsOverloadingAndRecursion.task_7_1_MethodsVarArgs;
 
 public class Main {
     public static void main(String[] args) {
-
         StringConcatenation stringConcatenation = new StringConcatenation();
 
         String name = "Ivan";

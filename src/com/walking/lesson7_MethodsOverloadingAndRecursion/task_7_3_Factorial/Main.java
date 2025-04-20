@@ -1,4 +1,4 @@
-package com.walking.lesson7_3_Factorial;
+package com.walking.lesson7_MethodsOverloadingAndRecursion.task_7_3_Factorial;
 
 public class Main {
     public static void main(String[] args) {
