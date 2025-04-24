@@ -1,4 +1,4 @@
-package com.walking.lesson12_EncapsulationPackagesAccessModifiersGettersAndSetters;
+package com.walking.lesson12_counterAggregation;
 
 public class Main {
 
@@ -13,4 +13,12 @@ public class Main {
     // Ответственность класса, содержащего main() — создание счетчиков. Сам класс также предлагаю назвать Main.
     // Также реализовать в классе Main приватный метод, который позволяет вывести значения счетчиков
 
+    public static void main(String[] args) {
+        Counter counter = new Counter("Газовый счётчик", 0.0, "Метр кубический");
+        System.out.printf("%s, показания: %.2f %s", counter.getName(), counter.getValue(), counter.getUnit());
+
+        counter.setValue(9.5);
+
+        System.out.printf("\n%s, показания: %.2f %s", counter.getName(), counter.getValue(), counter.getUnit());
+    }
 }
