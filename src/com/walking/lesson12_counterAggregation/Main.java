@@ -14,7 +14,7 @@ public class Main {
     // Также реализовать в классе Main приватный метод, который позволяет вывести значения счетчиков
 
     public static void main(String[] args) {
-        Counter counter = new Counter("Газовый счётчик", 0.0, Unit.KILOWATT_HOUR);
+        Counter counter = new Counter("Электросчётчик", 0.0, Unit.KILOWATT_HOUR);
         System.out.printf("%s, показания: %.2f %s", counter.getName(), counter.getValue(), counter.getUnit());
 
         counter.setValue(9.5);
