@@ -19,7 +19,27 @@ public class Main {
 
         counter.setValue(9.5);
 
-        System.out.printf("\n%s, показания: %.2f %s", counter.getName(), counter.getValue(), counter.getUnit());
+        System.out.printf("\n%s, показания: %.2f %s\n", counter.getName(), counter.getValue(), counter.getUnit());
+
+        CounterService counters = new CounterService();
+        counters.addMeter(counter);
+        counters.increment(counter.getName());
+        System.out.println(counter.getValue());
+        counters.increment(counter.getName(), 4.5);
+        System.out.println(counter.getValue());
+
+        Counter counter1 = new Counter("Счётчик холодной воды", 0.0, Unit.CUBIC_METER);
+        counters.addMeter(counter1);
+
+        int count = 1;
+        for (Counter counter2 :counters.getAllMeters()) {
+            System.out.println(count + ": " +  counter2.getName());
+            count++;
+        }
+
+        counters.reset("Электросчётчик");
+
+        System.out.println(counter.getValue());
 
     }
 }
