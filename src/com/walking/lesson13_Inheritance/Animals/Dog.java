@@ -1,19 +1,17 @@
 package com.walking.lesson13_Inheritance.Animals;
 
 public class Dog extends Animal{
-
+    private static final String DOG_CLASS_NAME = "Dog";
     private final String color;
 
     public Dog(String color) {
-        super();
+        super(DOG_CLASS_NAME, "Woof!");
         this.color = color;
     }
 
-    @Override
-    protected void sound() {
-        System.out.println("Woof!");
+    public void woof() {
+        sound();
     }
-
     public String getColor() {
         return color;
     }

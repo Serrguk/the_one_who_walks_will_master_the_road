@@ -1,25 +1,22 @@
 package com.walking.lesson13_Inheritance.Animals;
 
 public class Cow extends Animal {
-    private final String name;
+    private static final String COW_CLASS_NAME = "Cow";
     private final String color;
 
-    public Cow(String name, String color) {
-        super();
-        this.name = name;
+    public Cow(String color) {
+        super(COW_CLASS_NAME, "Moo!");
         this.color = color;
     }
 
-    @Override
-    protected void sound() {
-        System.out.println("Moo!");
+    public void moo() {
+        sound();
     }
 
     @Override
     public String toString() {
         return "Cow{" +
-                "name='" + name + '\'' +
-                ", color='" + color + '\'' +
+                "color='" + color + '\'' +
                 '}';
     }
 }
