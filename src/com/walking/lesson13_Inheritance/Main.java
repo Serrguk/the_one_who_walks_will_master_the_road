@@ -1,4 +1,9 @@
-package com.walking.lesson13_Inheritance.Animals;
+package com.walking.lesson13_Inheritance;
+
+import com.walking.lesson13_Inheritance.Animals.Animal;
+import com.walking.lesson13_Inheritance.Animals.Cat;
+import com.walking.lesson13_Inheritance.Animals.Cow;
+import com.walking.lesson13_Inheritance.Animals.Dog;
 
 public class Main {
     public static void main(String[] args) {
