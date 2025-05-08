@@ -14,7 +14,7 @@ public class Square extends RightFigure {
 
     private void drawBorder(int side) {
         System.out.print(" ");
-        for (int i = 0; i < side; i++) {
+        for (int i = 0; i < side * 2; i++) {
             System.out.print(UP_AND_DOWN_LINE);
         }
         System.out.println();
@@ -22,7 +22,7 @@ public class Square extends RightFigure {
 
     private void drawSideWalls(int side) {
         String line = VERTICAL_LINE;
-        for (int i = 0; i < side; i++) {
+        for (int i = 0; i < side * 2; i++) {
             line = line.concat(" ");
         }
         line = line.concat(VERTICAL_LINE);
