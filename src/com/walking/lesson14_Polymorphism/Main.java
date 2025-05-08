@@ -1,6 +1,7 @@
 package com.walking.lesson14_Polymorphism;
 
 import com.walking.lesson14_Polymorphism.RightFigure.Figure.Square;
+import com.walking.lesson14_Polymorphism.RightFigure.Figure.Triangle;
 import com.walking.lesson14_Polymorphism.RightFigure.RightFigure;
 
 import java.util.Scanner;
@@ -15,8 +16,7 @@ public class Main {
         System.out.println("Введите название фигуры и длину стороны через пробел: ");
         Scanner scanner = new Scanner(System.in);
 
-        //String input = scanner.nextLine();
-        String input = "квадрат 5";
+        String input = scanner.nextLine();
         String[] data = input.split(" ");
 
         String figure = data[0];
@@ -27,6 +27,11 @@ public class Main {
                 RightFigure square = new Square();
                 square.draw(side);
             }
+            case "треугольник" -> {
+                RightFigure triangle = new Triangle();
+                triangle.draw(side);
+            }
+            default -> System.out.println("Фигура не найдена!");
         }
     }
 }
