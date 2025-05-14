@@ -2,10 +2,12 @@ package com.walking.lesson19_ObjectMethods.Models;
 
 public class Car {
     private CarBrand carBrand;
+    private CarColor color;
     private String regNumber;
 
-    public Car(CarBrand carBrand, String regNumber) {
+    public Car(CarBrand carBrand, CarColor color, String regNumber) {
         this.carBrand = carBrand;
+        this.color = color;
         this.regNumber = regNumber;
     }
 
@@ -25,8 +27,20 @@ public class Car {
         this.regNumber = regNumber;
     }
 
+    public CarColor getColor() {
+        return color;
+    }
+
+    public void setColor(CarColor color) {
+        this.color = color;
+    }
+
     @Override
     public String toString() {
-        return carBrand.toString();
+        return carBrand.toString()
+                + ", Color: "
+                + getColor()
+                + ", Registration Number: "
+                + getRegNumber();
     }
 }

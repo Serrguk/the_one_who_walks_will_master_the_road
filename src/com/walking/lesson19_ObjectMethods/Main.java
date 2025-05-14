@@ -2,6 +2,7 @@ package com.walking.lesson19_ObjectMethods;
 
 import com.walking.lesson19_ObjectMethods.Models.Car;
 import com.walking.lesson19_ObjectMethods.Models.CarBrand;
+import com.walking.lesson19_ObjectMethods.Models.CarColor;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class Main {
         //  Если машина найдена — выведите ее строковое представление в консоль.
         //  Опциональное усложнение: номер машины может быть не уникальным.
 
-        Car zeekrR1 = new Car(CarBrand.ZEEKR, "FUCKOFF");
+        Car zeekrR1 = new Car(CarBrand.ZEEKR, CarColor.ORANGE, "FUCKOFF");
 
         System.out.println(zeekrR1);
         System.out.println(zeekrR1.getCarBrand());
