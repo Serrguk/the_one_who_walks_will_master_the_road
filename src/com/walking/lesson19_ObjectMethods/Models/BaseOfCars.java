@@ -20,6 +20,13 @@ public class BaseOfCars {
         return cars;
     }
 
+    public void printAllCar() {
+        for (Car car : cars) {
+            System.out.println(car);
+        }
+
+    }
+
     @Override
     public String toString() {
         return "BaseOfCars{" +

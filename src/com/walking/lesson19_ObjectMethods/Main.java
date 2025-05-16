@@ -27,8 +27,6 @@ public class Main {
 
         System.out.println();
 
-        for (Car car : baseOfCars.getCars()) {
-            System.out.println(car);
-        }
+        baseOfCars.printAllCar();
     }
 }
