@@ -37,10 +37,10 @@ public class Car {
 
     @Override
     public String toString() {
-        return carBrand.toString()
+        return carBrand
                 + ", Color: "
-                + getColor()
+                + color
                 + ", Registration Number: "
-                + getRegNumber();
+                + regNumber;
     }
 }
