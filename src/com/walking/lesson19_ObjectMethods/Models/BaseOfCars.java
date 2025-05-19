@@ -27,6 +27,31 @@ public class BaseOfCars {
 
     }
 
+    public void search(String query) {
+        if (query == null || query.length() < 3) {
+            System.out.println("Запрос должен содержать минимум 3 символа.");
+            return;
+        }
+        
+        boolean found = false;
+        String lowerQuery = query.toLowerCase();
+
+        for (Car car : cars) {
+            if (car.getCarBrand().toString().toLowerCase().contains(lowerQuery) ||
+                    car.getColor().toString().toLowerCase().contains(lowerQuery) ||
+                    car.getRegNumber().toLowerCase().contains(lowerQuery)) {
+
+                System.out.println(car);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Совпадений не найдено.");
+        }
+    }
+
+
     @Override
     public String toString() {
         return "BaseOfCars{" +
