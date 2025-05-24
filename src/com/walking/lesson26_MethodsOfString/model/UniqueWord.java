@@ -1,4 +1,4 @@
-package com.walking.lesson26_MethodsOfString.Models;
+package com.walking.lesson26_MethodsOfString.model;
 
 import java.util.ArrayList;
 

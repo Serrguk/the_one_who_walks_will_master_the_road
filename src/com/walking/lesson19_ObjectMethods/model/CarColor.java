@@ -1,4 +1,4 @@
-package com.walking.lesson19_ObjectMethods.Models;
+package com.walking.lesson19_ObjectMethods.model;
 
 public enum CarColor {
     WHITE ("White"),

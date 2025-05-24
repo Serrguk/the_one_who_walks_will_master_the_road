@@ -1,9 +1,9 @@
 package com.walking.lesson19_ObjectMethods;
 
-import com.walking.lesson19_ObjectMethods.Models.BaseOfCars;
-import com.walking.lesson19_ObjectMethods.Models.Car;
-import com.walking.lesson19_ObjectMethods.Models.CarBrand;
-import com.walking.lesson19_ObjectMethods.Models.CarColor;
+import com.walking.lesson19_ObjectMethods.model.BaseOfCars;
+import com.walking.lesson19_ObjectMethods.model.Car;
+import com.walking.lesson19_ObjectMethods.model.CarBrand;
+import com.walking.lesson19_ObjectMethods.model.CarColor;
 
 import java.util.Arrays;
 import java.util.Scanner;

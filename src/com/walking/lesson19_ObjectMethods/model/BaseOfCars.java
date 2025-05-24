@@ -1,4 +1,4 @@
-package com.walking.lesson19_ObjectMethods.Models;
+package com.walking.lesson19_ObjectMethods.model;
 
 import java.util.Arrays;
 
@@ -50,7 +50,6 @@ public class BaseOfCars {
             System.out.println("Совпадений не найдено.");
         }
     }
-
 
     @Override
     public String toString() {

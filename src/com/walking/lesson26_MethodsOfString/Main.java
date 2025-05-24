@@ -1,6 +1,6 @@
 package com.walking.lesson26_MethodsOfString;
 
-import com.walking.lesson26_MethodsOfString.Models.UniqueWord;
+import com.walking.lesson26_MethodsOfString.model.UniqueWord;
 
 import java.util.ArrayList;
 import java.util.Scanner;
