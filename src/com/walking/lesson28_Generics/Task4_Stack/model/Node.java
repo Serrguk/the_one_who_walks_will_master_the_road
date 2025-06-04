@@ -1,7 +1,7 @@
 package com.walking.lesson28_Generics.Task4_Stack.model;
 
 public class Node<T> {
-    private T value;
+    private final T value;
     private Node<T> next;
 
     public Node(T value) {

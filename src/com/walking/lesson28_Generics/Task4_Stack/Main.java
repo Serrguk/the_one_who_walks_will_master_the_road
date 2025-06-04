@@ -1,5 +1,7 @@
 package com.walking.lesson28_Generics.Task4_Stack;
 
+import com.walking.lesson28_Generics.Task4_Stack.model.MyStack;
+
 public class Main {
 
     // TODO: Реализовать параметризованный класс, хранящий и обрабатывающий стек.
@@ -14,6 +16,22 @@ public class Main {
     //  представленных в виде массива ([строковое представление элемента1, ..., строковое представление элементаN]).
 
     public static void main(String[] args) {
+
+        MyStack<Integer> stack = new MyStack<>();
+        stack.push(25);
+        stack.push(20);
+        stack.push(15);
+        stack.push(10);
+        stack.push(5);
+
+
+        System.out.println(stack.size());
+        System.out.println(stack.find(15));
+        System.out.println(stack.size());
+        System.out.println(stack);
+
+        stack.pop();
+        System.out.println(stack.size() + ": " + stack);
 
     }
 }
