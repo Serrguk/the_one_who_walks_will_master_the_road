@@ -3,6 +3,9 @@ package com.walking.lesson32_Files.task1;
 import com.walking.lesson32_Files.task1.model.Car;
 import com.walking.lesson32_Files.task1.model.CarRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     // TODO: Задача 1: Используя класс Car (или создав новый класс для сущности «машина», на ваше усмотрение) из задачи
@@ -22,7 +25,13 @@ public class Main {
 
         CarRepository writer = new CarRepository();
 
-        writer.write(vesta);
-        writer.write(citroen);
+        List<Car> cars = new ArrayList<>();
+        cars.add(vesta);
+        cars.add(citroen);
+
+        writer.writeAll(cars);
+        System.out.println(writer.readAll());
+        writer.delete(vesta);
+        System.out.println(writer.readAll());
     }
 }

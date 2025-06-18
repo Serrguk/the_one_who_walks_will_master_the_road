@@ -1,5 +1,7 @@
 package com.walking.lesson32_Files.task1.model;
 
+import java.util.Objects;
+
 public class Car {
     private final String brand;
     private final String model;
@@ -34,5 +36,20 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", color='" + color + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return brand.equals(car.brand) &&
+                model.equals(car.model) &&
+                color.equals(car.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, model, color);
     }
 }
