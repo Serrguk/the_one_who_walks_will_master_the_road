@@ -32,6 +32,7 @@ public class Main {
         writer.writeAll(cars);
         System.out.println(writer.readAll());
         writer.delete(vesta);
+        writer.update(citroen, c -> c.setColor("Blue"));
         System.out.println(writer.readAll());
     }
 }

@@ -3,6 +3,7 @@ package com.walking.lesson32_Files.task1.model;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class CarRepository {
     private static final String FILE_PATH = "./resources/cars.txt";
@@ -40,16 +41,23 @@ public class CarRepository {
         writeAll(cars);
     }
 
-    // Обновление машины
-    public void update(Car targetCar, Car updatedCar) {
+    public void update(Car targetCar, Consumer<Car> updater) {
         List<Car> cars = readAll();
-        for (int i = 0; i < cars.size(); i++) {
-            if (cars.get(i).equals(targetCar)) {
-                cars.set(i, updatedCar);
+        boolean updated = false;
+
+        for (Car car : cars) {
+            if (car.equals(targetCar)) {
+                updater.accept(car); // применяем действие к найденному объекту
+                updated = true;
                 break;
             }
         }
-        writeAll(cars);
+
+        if (updated) {
+            writeAll(cars);
+        } else {
+            System.out.println("Машина не найдена.");
+        }
     }
 
     private Car parseCarFromLine(String line) {
