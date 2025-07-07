@@ -22,13 +22,33 @@ public class PeriodBetweenDates {
         int years = Math.abs(period.getYears());
 
         System.out.printf("""
-                        Seconds: %d
-                        Minutes: %d
-                        Hours: %d
-                        Days: %d
-                        Months: %d
-                        Years: %d""",
-                seconds, minutes, hours, days, months, years);
+                Seconds: %d
+                Minutes: %d
+                Hours: %d
+                Days: %d
+                Months: %d
+                Years: %d
+                """, seconds, minutes, hours, days, months, years);
+
+        System.out.println("Summary: " + getSummary(dateTime1, dateTime2));
+
     }
 
+    private static String getSummary(LocalDateTime dateTime1, LocalDateTime dateTime2) {
+        Period period = Period.between(dateTime1.toLocalDate(), dateTime2.toLocalDate());
+
+        LocalDateTime intermediate = dateTime1.plusYears(period.getYears()).plusMonths(period.getMonths()).plusDays(period.getDays());
+
+        Duration duration = Duration.between(intermediate, dateTime2);
+
+        int years = Math.abs(period.getYears());
+        int months = Math.abs(period.getMonths());
+        int days = Math.abs(period.getDays());
+        long hours = duration.toHours();
+        long minutes = duration.toMinutes() % 60;
+        long seconds = duration.getSeconds() % 60;
+
+        return String.format("%d лет, %d месяцев, %d дней, %d часов, %d минут и %d секунд%n",
+                years, months, days, hours, minutes, seconds);
+    }
 }
